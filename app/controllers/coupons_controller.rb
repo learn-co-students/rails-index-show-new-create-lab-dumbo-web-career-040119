@@ -16,4 +16,9 @@ class CouponsController < ApplicationController
     @coupon = Coupon.create(params.require("coupon").permit("coupon_code", "store"))
     redirect_to @coupon
   end
+
+  def destroy
+    Coupon.destroy(params[:id])
+    redirect_to coupons_path
+  end
 end

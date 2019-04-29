@@ -3,3 +3,6 @@
 <h1><%= @coupon.coupon_code %></h1>
 
 <%= link_to "Back to Coupons", coupons_path %>
+
+<br><br>
+<%= button_to "Expired coupon", coupon_path(@coupon), method: :delete %>
